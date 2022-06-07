@@ -1,7 +1,7 @@
 let cad = `
 <div class="menu">
     <div class="imagen">
-        <img src="images/logo.png" alt="logo" width="150" height="auto">
+        <img src="images/logo.png" alt="logo">
     </div>    
         <nav>
             <div class="selectores">
@@ -25,13 +25,17 @@ cad = `
     <div>
         <h2>Contacto</h2>
         <div>
-            <a href=""><i class="fa-brands fa-whatsapp"> 11-3568-7729 / 11-6750-3869 </i></a>
+            <i class="fa-brands fa-whatsapp"> 11-3568-7729 / 11-6750-3869</i>
         </div>
         <div>
-            <a href="https://www.facebook.com/La-Tatoña-954188131271087"><i class="fa-brands fa-facebook"> Facebook</i></a>
+            <a href="https://www.facebook.com/La-Tatoña-954188131271087">
+                <i class="fa-brands fa-facebook"> Facebook</i>
+            </a>
         </div>
         <div>
-            <a href="https://www.instagram.com/la.tatona/"><i class="fa-brands fa-instagram"> Instagram</i></a>
+            <a href="https://www.instagram.com/la.tatona/">
+                <i class="fa-brands fa-instagram"> Instagram</i>
+            </a>
         </div>
     </div>
     <div>

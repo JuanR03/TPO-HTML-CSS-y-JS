@@ -42,8 +42,8 @@
         validarNombre(e);
         validarTelefono(e);
         validarMotivo(e);
-        validarCheckbox(e);
         validarConsulta(e);
+        validarCheckbox(e);
     }
     
 

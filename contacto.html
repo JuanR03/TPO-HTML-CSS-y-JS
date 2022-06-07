@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="estilos.css">
     <link rel="icon" href="logotatoña.ico">
     <script src="https://kit.fontawesome.com/19fd535fc9.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charis+SIL&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <title>La Tatoña - Contacto</title>
 </head>
 <body>
@@ -14,32 +17,41 @@
         <header id="idheader"></header>
         <main>
             <div class="formulario">
-                <form action="" id="formulario">
-                        <br>
-                        <label for="name">Nombre: </label>
-                        <input type="text" name="name" id="name" placeholder="Ingrese su nombre aquí ..." size="20">
-                        <br><br>
-                        <label for="mail">Mail (opcional): </label>
-                        <input type="email" name="mail" id="mail" placeholder="Ingrese su correo aquí (opcional) ..." size="30">
-                        <br><br>
-                        <label for="num">N° de teléfono: </label>
-                        <input type="tel" name="num" id="num" placeholder="Ingrese su número de teléfono aquí ..." size="30">
-                        <br><br>
-                        <label for="motivo">Motivo de consulta: </label>
-                        <select name="motivo" id="motivo">
-                            <option value="elegir">Elegir</option>
-                            <option value="clientes">Atención al cliente</option>
-                            <option value="comercial">Contacto comercial</option>
-                        </select>
-                        <br><br>
-                        <label for="consulta">Su consulta: </label>
-                        <br><br>
-                        <textarea name="consulta" id="consulta" cols="20" rows="10" placeholder="Ingrese su consulta aquí ..."></textarea>
-                        <br><br>
-                        <input type="checkbox" name="confirmacion"> Ingresé mis datos correctamente.
-                        <br><br>
-                        <input type="submit" value="Enviar" id="btn">
-                        <br><br>
+                <form class="form" id="formulario">
+                        <h2 class="formTitulo">¿Tiene alguna consulta?</h2>
+                        <p class="formParrafo">Déjela en el siguiente formulario</p>
+
+                        <div class="formContainer">
+                            <div>
+                                <label for="name" class="formMarca">Nombre:</label>
+                                <input type="text" name="name" id="name" placeholder="Ingrese su nombre aquí ..." class="formInput">
+                            </div>
+                            <div>
+                                <label for="mail" class="formMarca">Mail (opcional):</label>
+                                <input type="email" name="mail" id="mail" placeholder="Ingrese su correo aquí (opcional) ..." class="formInput">
+                            </div>
+                            <div>
+                                <label for="num" class="formMarca">N° de teléfono:</label>
+                                <input type="tel" name="num" id="num" placeholder="Ingrese su número de teléfono aquí ..." class="formInput">
+                            </div>
+                            <div>
+                                <label for="motivo" class="formMarca">Motivo de consulta:</label>
+                                <select name="motivo" id="motivo" class="formInput">
+                                    <option value="elegir">Elegir</option>
+                                    <option value="clientes">Atención al cliente</option>
+                                    <option value="comercial">Contacto comercial</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="consulta" class="formMarca">Su consulta:</label>
+                                <textarea name="consulta" id="consulta" rows="5" placeholder="Ingrese su consulta aquí ..." class="formInput"></textarea>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="confirmacion"> Ingresé mis datos correctamente.
+                            </div>
+
+                            <input type="submit" value="Enviar" id="btn" class="formSubmit">
+                        </div>
                 </form>
                 <br>
             </div>

@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 a:visited, a:link {
@@ -10,26 +10,28 @@ a:visited, a:link {
 }
 
 body {
-    font-size: 14px;
+    font-size: 1rem;
 }
 
+/* CSS Header */
 .menu {
     height: auto;
-    background-color: rgb(175, 216, 230);
+    background-color: #afd8e6;
     width: 100%;
-    font-size: 21px;
-
+    font-size: 2rem;
+    font-family: 'Charis SIL', serif;
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: auto 6fr;
 }
 
-.menu .imagen {
-    padding: 10%;
+.menu .imagen img{
+    width: 100%;
+    height: auto;
+    max-height: 6em;
 }
 
 .menu .selectores {
     height: 100%;
-
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: auto;
@@ -46,109 +48,231 @@ body {
     transition-duration: 0.5s;
 }
 
-main {
-    background-color: rgb(81, 165, 88);
-}
-
-.main {
-    width: 100%;
-    height: auto;
-
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-}
-
-.main div:first-child {
-    padding: 5%;
-}
-
-
+/* CSS Footer */
 footer {
     width: 100%;
-    
-    height: auto;
-    padding: 5% 0;
+    min-height: 10vh;
     background-color: rgb(125, 165, 204);
 }
 
 footer .columnas {
-    height: 100%;
-    
+    padding: .5em 2em;
+    font-family: 'Charis SIL', serif;
+    font-size: 1rem;
     display: grid;
     grid-template-columns: repeat(2, auto);
     justify-content: space-evenly;
-    align-content: center;
 }
 
 footer .columnas h2 {
+    font-size: 2rem;
     text-align: center;
 }
 
-.mainproductos {
-    width: auto;
+footer .columas a i{
+    font-family: 'Charis SIL', serif;
+}
+
+/* CSS Index */
+
+.main {
+    background-color: #e8f5ff;
+    background-image:  radial-gradient(#40CFFF 1.4000000000000001px, transparent 1.4000000000000001px), radial-gradient(#40CFFF 1.4000000000000001px, #e8f5ff 1.4000000000000001px);
+    background-size: 56px 56px;
+    background-position: 0 0,28px 28px;
+    width: 100%;
+    min-height: 80vh;
+    font-family: 'Charis SIL', serif;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.mainContainer{
+    background-color: #e8f5ff;
+    font-size: 1rem;
+    margin: 1.5rem 2em;
+    display: grid;
+}
+
+.mainContainer img{
+    width: 100%;
+    max-width: 300px;
     height: auto;
-    padding: 20px 15px;
-    
+    border-radius: 15px;
+    box-shadow: 0 7px 9px -3px rgb(0 0 0 /90%);
+}
+
+/* CSS Productos */
+.mainproductos {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.productos .cartas {
-    display: grid;
+    justify-content: space-evenly;
     align-content: center;
+    background-color: #ffffff;
+    background-image: radial-gradient(circle at center center, #FFF0C9, #ffffff), repeating-radial-gradient(circle at center center, #FFF0C9, #FFF0C9, 9px, transparent 18px, transparent 9px);
+    background-blend-mode: multiply;
 }
 
-.formulario {
-    padding: 50px 30%;
+.cartas {
+    background-color: #fff;
+    min-height: 200px;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 20px;
+    margin: 1.5rem;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 5px 10px -1px rgb(0 0 0 /75%);
 }
 
-.formulario form {
+.cartas .textos{
+    color: #fff;
+    height: 100%;
+    text-shadow: 0px 0px 3px #000;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+/* CSS Contacto */
+.formulario{
+    background-color: #e8f5ff;
+    background-image:  linear-gradient(#dedede 0.8px, transparent 0.8px), linear-gradient(90deg, #dedede 0.8px, transparent 0.8px), linear-gradient(#dedede 0.4px, transparent 0.4px), linear-gradient(90deg, #dedede 0.4px, #e8f5ff 0.4px);
+    background-size: 20px 20px, 20px 20px, 4px 4px, 4px 4px;
+    background-position: -0.8px -0.8px, -0.8px -0.8px, -0.4px -0.4px, -0.4px -0.4px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    min-height: 100vh;
+}
+
+.form{
+    background-color: #fff;
+    margin: auto;
+    width: 90%;
+    max-width: 900px;
+    padding: 4em 2.5em;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
     text-align: center;
-    background-color: rgb(206, 203, 203);
-    border-color: rgb(124, 124, 124);
-    border-style: solid;
 }
 
+.formTitulo{
+    font-size: 2rem;
+    margin-bottom: .5em;
+}
 
-@media only screen and (max-width: 500px) {
+.formParrafo{
+    font-weight: 300;
+}
+
+.formContainer{
+    margin-top: 1.2em;
+    display: grid;
+    gap: 1.5em;
+}
+
+.formInput{
+    width: 100%;
+    background: none;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border-radius: 10px;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.formSubmit{
+    background-color: #93c9f1;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 425px){    
+    .menu{
+        font-size: 1rem !important;
+    }
     .menu .selectores{
         height: 100%;
         grid-template-columns: auto;
         grid-template-rows: repeat(3, auto);
-        align-content: space-around;
-        
+        align-content: space-around;    
     }
 
-    .menu {
-        font-size: 16px;
-    }
-    
-    .mainproductos {
-        grid-template-columns: repeat(2, auto);
+    .mainContainer{
+        font-size: .5rem;
     }
 }
 
-@media only screen and (min-width: 500px) and (max-width: 850px) {
+@media only screen and (max-width: 600px){
     .menu {
-        font-size: 18px;
+        font-size: 1.2rem;
     }
 
-    .mainproductos {
-        grid-template-columns: repeat(3, auto);
-    }
-}
-
-@media only screen and (max-width: 850px) {
-    .main {
-        grid-template-columns: auto;
-        grid-template-rows: repeat(2, 1fr);
-    }
-    
     footer .columnas {
+        font-size: .9rem;
         grid-template-columns: auto;
         grid-template-rows: repeat(2, auto);
-        align-content: space-around;
-        row-gap: 20px;
+    }
+
+    footer .columnas h2{
+        font-size: 1.3rem;
+    }
+
+    .mainContainer{
+        font-size: .8rem;
+    }
+
+    .mainproductos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cartas{
+        font-size: .7rem;
+    }
+
+    .form{
+        padding: 2.5em 1.5em;
+    }
+    
+    .formTitulo{
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px){
+    .menu {
+        font-size: 1.5rem;
+    }
+
+    footer .columnas h2{
+        font-size: 1.5rem;
+    }
+    
+    .mainproductos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cartas{
+        font-size: 1rem;
+    }
+
+    .form{
+        padding: 3em 2.5em;
+    }
+}
+
+@media only screen and (max-width:992px){
+    .main {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, auto);
     }
 }
